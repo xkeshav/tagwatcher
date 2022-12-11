@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 const parameterElement = {
   section: document.querySelector('#parameter-section'),
   jsonBlock: document.querySelector('#parameter-json'),
@@ -8,18 +8,20 @@ const parameterElement = {
   resetButton: document.querySelector('#reset-parameter'),
 };
 
+parameterElement
+
 const TIMEOUT_IN_MS = 2500;
 
 // common utility methods
 const Utils = {
-  printPrettyJson: (obj) => {
+  printPrettyJson: (obj: {}) => {
     if (typeof obj === 'object') {
       return JSON.stringify(obj, null, 4);
     } else {
       return '';
     }
   },
-  getTrimmedObject: (obj) => {
+  getTrimmedObject: (obj: { [index: string]: any }) => {
     const trimmedObject = {};
     if (typeof obj === 'object') {
       for (const k in obj) {
@@ -31,7 +33,7 @@ const Utils = {
     }
     return trimmedObject;
   },
-  doEnable: (elem) => {
+  doEnable: (elem: HTMLElement) => {
     if (elem.hasAttribute('disabled')) {
       elem.classList.remove('disabled');
       elem.removeAttribute('disabled');
@@ -39,7 +41,7 @@ const Utils = {
     }
   },
 
-  doDisable: (elem) => {
+  doDisable: (elem: HTMLElement) => {
     if (!elem.hasAttribute('disabled')) {
       elem.classList.add('disabled');
       elem.setAttribute('disabled', 'true');
@@ -55,7 +57,7 @@ const Utils = {
     buttonElements.forEach((elem) => Utils.doDisable(elem));
   },
 
-  copyToClipboard: (text) => {
+  copyToClipboard: (text: string) => {
     navigator.clipboard
       .writeText(text)
       .then(() => console.info('domain name copied to clipboard'))
@@ -76,7 +78,7 @@ const Utils = {
     return btn;
   },
 
-  createListItem: (domain) => {
+  createListItem: (domain: string) => {
     const li = document.createElement('li');
     li.classList.add('domain--item');
     const span = document.createElement('span');
@@ -90,7 +92,7 @@ const Utils = {
 const restoreOptions = () => {
   chrome.storage.local.get(['parameters'], (result) => {
     const { parameters } = result;
-    parameterElement.jsonBlock.innerText = Utils.printPrettyJson(parameters);
+    (parameterElement.jsonBlock as HTMLElement).innerText = Utils.printPrettyJson(parameters);
   });
 
   //domain selection
@@ -136,7 +138,7 @@ const ParameterHandler = {
       chrome.storage.local.set({ parameters }, () => {
         parameterElement.statusBlock.classList.remove('hide'); // display success message for a while
         Utils.disableButtonList([parameterElement.saveButton, parameterElement.resetButton]);
-        parameterElement.jsonBlock.innerText = Utils.printPrettyJson(parameters);
+        (parameterElement.jsonBlock as HTMLElement).innerText = Utils.printPrettyJson(parameters);
         setTimeout(() => {
           parameterElement.statusBlock.classList.add('hide');
         }, TIMEOUT_IN_MS);
@@ -154,12 +156,12 @@ parameterElement.resetButton.addEventListener('click', () => document.location.r
 
 const domainElement = {
   form: document.querySelector('#domain-form'),
-  input: document.querySelector('#domain-input'),
+  input: document.querySelector('#domain-input') as HTMLInputElement,
   list: document.querySelector('#domain-list'),
   messageBlock: document.querySelector('#domain-message'),
   statusBlock: document.querySelector('#domain-status'),
-  addButton: document.querySelector('#domain-add'),
-  saveButton: document.querySelector('#domain-save'),
+  addButton: document.querySelector('#domain-add') as HTMLButtonElement,
+  saveButton: document.querySelector('#domain-save') as HTMLButtonElement,
 };
 
 const DomainHandler = {

@@ -14,11 +14,24 @@ following are the main features in current version
 ## How to Install
 
 1. clone/download the zip and save on your file system.
-2. open google chrome and write _chrome://extensions/_ in address bar, in Edge type _edge://extensions_
-3. turn on the Developer mode ( top right side of the page )
-4. click on load unpacked and browse to the folder where you have downloaded the file in step 1
-5. check this extension will be added in the list and there should be no errors
-6. extension also visible in toolbar, click on extension icon in toolbar and pin the tagWatcher for handy access.
+2. navigate to folder from terminal and run
+3. run below commands
+
+   `npm install`
+
+   `npm run build`
+
+   ![npm command to build code](screenshots/npm-command.png)
+
+   it will create **dist** folder parallel to **src** folder where we will have source code
+
+4. open google chrome and write _chrome://extensions/_ in address bar, in Edge type _edge://extensions_
+5. turn on the Developer mode ( top right side of the page )
+6. click on load unpacked and browse to the folder **dist** where we have source code generated using step 2
+7. check this extension will be added in the list and there should be no errors
+8. extension also visible in toolbar, click on extension icon in browser toolbar and pin the TagWatcher for the handy access.
+
+![how to pin](screenshots/how-to-pin.png)
 
 ## How it Works
 
@@ -48,12 +61,23 @@ This is an option page for the extension which allow user to customize the behav
 - Vanilla JavaScript
 - Chrome Extension API
 
+to make any changes, you have run `npm build again` and reinstall the extension
+
 ## extension screenshot
+
+### Option Page
+
+![Option Page](screenshots/option-page.png)
+
+### Tagging Panel
+
+![Tagging Panel in Dev Tools](screenshots/tagging-panel.png)
 
 ## Known issues
 
 1. when tagging panel is not active and user do some click, it will not displayed when Tagging panel become visible but when we download the CSV, it contains all click details.
 2. when there is comma `,` in any of parameter value then CSV report will be incorrect.
+3. dark theme automatically applied, light theme not being applied
 
 ## TODO
 

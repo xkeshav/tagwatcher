@@ -1,12 +1,10 @@
-// @ts-nocheck
-let author;
+let author: { name: string };
 
 chrome.storage.sync.get('author', (result) => {
   ({ author } = result); // assign into already defined variable while destructuring
 });
 
-// @ts-ignore
-chrome.devtools.panels.create('Tagging', '', 'src/html/panel.html', (panel) => {
+chrome.devtools.panels.create('Tagging', '', './html/panel.html', (panel) => {
   panel.onShown.addListener((win) => {
     console.log('Tagging Panel is shown');
     // @ts-ignore
@@ -20,7 +18,7 @@ chrome.devtools.panels.create('Tagging', '', 'src/html/panel.html', (panel) => {
   });
 });
 
-const addAuthor = (element) => {
+const addAuthor = (element: HTMLElement) => {
   const authorDiv = document.createElement('p');
   if (author) {
     authorDiv.innerHTML = `Developed by <a href="#" >${author.name}</a> | <strong>ZERO</strong>`;

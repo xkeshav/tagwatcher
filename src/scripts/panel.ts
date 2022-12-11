@@ -1,4 +1,3 @@
-// @ts-nocheck
 let clearButton, downloadLink, introParagraph, panelContainer, panelFooter;
 let contentTags = [];
 let taggingCaptureUrlList = [];
@@ -29,13 +28,13 @@ panelContainer = document.querySelector('#container');
 introParagraph = document.querySelector('#intro');
 panelFooter = document.querySelector('#footer');
 // empty panel information paragraph
-emptyInfo = document.querySelector('#empty');
+let emptyInfo = document.querySelector('#empty');
 //get text from en/messages.json
 // introParagraph.innerText = chrome.i18n.getMessage("intro");
 introParagraph.innerText = 'No new request found yet.';
 clearButton = document.querySelector('#clear');
 
-clearButton.addEventListener('click', () => {
+clearButton?.addEventListener('click', () => {
   Common.removeChildren(panelContainer);
   contentTags = [];
   panelContainer.innerHTMl = '';
@@ -44,7 +43,7 @@ clearButton.addEventListener('click', () => {
 
 //download link
 downloadLink = document.querySelector('#download');
-downloadLink.addEventListener('click', (e) => {
+downloadLink?.addEventListener('click', (e) => {
   if (contentTags.length) {
     Common.downloadAsCSV();
     // disable download button to prevent multiple click
@@ -181,7 +180,7 @@ so found alternative to count original children with class .details within panel
 although download as CSV have all the content which may not appears on Tagging panel 
 */
 
-const createSummary = (isLink) => {
+const createSummary = (isLink: boolean) => {
   const detailsNode = panelContainer && panelContainer.querySelectorAll('.details');
   const childrenLength = detailsNode ? detailsNode.length : 0;
   const title = isLink ? ACTION_LABEL : PAGE_LABEL;
@@ -232,7 +231,7 @@ chrome.devtools.network.onRequestFinished.addListener((event) => {
   if (isTaggingURL && contentHeader) {
     const { size, mimeType } = response.content;
     // only capture valid response
-    if ((mimeType === MIME) & (size > 0)) {
+    if (mimeType === MIME && size > 0) {
       const tagParams = Common.formatQueryParams(request);
       if (tagParams.length) {
         contentTags.push(tagParams);
