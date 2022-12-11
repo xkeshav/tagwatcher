@@ -67,7 +67,7 @@ to make any changes, you have run `npm build again` and reinstall the extension
 
 ### Option Page
 
-![Option Page](screenshots/option-page.png)
+![Option Page](./screenshots/option-page.png)
 
 ### Tagging Panel
 
