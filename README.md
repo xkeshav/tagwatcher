@@ -21,7 +21,7 @@ following are the main features in current version
 
    `npm run build`
 
-   ![npm command to build code](screenshots/npm-command.png)
+   ![npm command to build code]('./screenshots/npm-command.png')
 
    it will create **dist** folder parallel to **src** folder where we will have source code
 
@@ -31,7 +31,7 @@ following are the main features in current version
 7. check this extension will be added in the list and there should be no errors
 8. extension also visible in toolbar, click on extension icon in browser toolbar and pin the TagWatcher for the handy access.
 
-![how to pin](screenshots/how-to-pin.png)
+![how to pin](./screenshots/how-to-pin.png)
 
 ## How it Works
 
@@ -71,7 +71,7 @@ to make any changes, you have run `npm build again` and reinstall the extension
 
 ### Tagging Panel
 
-![Tagging Panel in Dev Tools](screenshots/tagging-panel.png)
+![Tagging Panel in Dev Tools](./screenshots/tagging-panel.png)
 
 ## Known issues
 
