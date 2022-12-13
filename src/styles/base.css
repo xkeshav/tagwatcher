@@ -5,6 +5,7 @@
 }
 
 :root {
+  color-scheme: light dark;
   --black: hsl(0, 0%, 0%);
   --grey: hsl(0, 0%, 50%);
   --white: hsl(0, 0%, 100%);
@@ -16,10 +17,6 @@
   --font-lg: 1.25rem;
 
   --half: 0.5rem;
-
-  --accent-color: hsl(0, 0%, 0%);
-  --background-color: hsl(0, 0%, 100%);
-  --link-color: hsl(122, 52%, 28%);
 
   --color-marker: hsl(0, 12%, 48%);
   --color-caret: hsl(60, 100%, 27%);

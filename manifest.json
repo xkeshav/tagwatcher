@@ -42,7 +42,7 @@
     "open_in_tab": true
   },
   "short_name": "tagWatcher",
-  "version_name": "3.1.0",
+  "version_name": "3.2.0",
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   }

@@ -44,10 +44,12 @@ chrome.runtime.onInstalled.addListener((details) => {
 });
 
 chrome.storage.onChanged.addListener((changes, namespace) => {
-  for (let [key, { ov, nv }] of Object.entries(changes)) {
-    console.log(`Storage key ${key} in namespace ${namespace} changed`);
-    console.log(`old values were ${ov}`);
-    console.log(`new values are ${nv}`);
+  if ('active' in changes) {
+    for (let [key, { ov, nv }] of Object.entries(changes.active)) {
+      console.log(`Storage key ${key} in namespace ${namespace} changed`);
+      console.log(`old values were ${ov}`);
+      console.log(`new values are ${nv}`);
+    }
   }
 });
 

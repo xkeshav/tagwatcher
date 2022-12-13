@@ -10,7 +10,7 @@ chrome.devtools.panels.create('Tagging', '', 'src/html/panel.html', (panel) => {
   panel.onShown.addListener((win) => {
     console.log('Tagging Panel is shown');
     // @ts-ignore
-    panelFooter = win.document.querySelector('footer');
+    const panelFooter = win.document.querySelector('footer');
     // @ts-ignore
     addAuthor(panelFooter);
   });

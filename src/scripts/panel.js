@@ -29,7 +29,7 @@ panelContainer = document.querySelector('#container');
 introParagraph = document.querySelector('#intro');
 panelFooter = document.querySelector('#footer');
 // empty panel information paragraph
-emptyInfo = document.querySelector('#empty');
+//let emptyInfo = document.querySelector('#empty');
 //get text from en/messages.json
 // introParagraph.innerText = chrome.i18n.getMessage("intro");
 introParagraph.innerText = 'No new request found yet.';
@@ -232,7 +232,7 @@ chrome.devtools.network.onRequestFinished.addListener((event) => {
   if (isTaggingURL && contentHeader) {
     const { size, mimeType } = response.content;
     // only capture valid response
-    if ((mimeType === MIME) & (size > 0)) {
+    if (mimeType === MIME && size > 0) {
       const tagParams = Common.formatQueryParams(request);
       if (tagParams.length) {
         contentTags.push(tagParams);
