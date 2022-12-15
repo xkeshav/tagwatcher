@@ -17,7 +17,14 @@
     --bg-button: hsl(0, 59%, 41%);
     --bg-button__download: hsl(130, 53%, 76%);
     --bg-footer: hsl(215, 69%, 89%);
+    --bg-field: hsl(208, 100%, 97%);
+    --bg-parameter: hsl(70, 80%, 87%);
+    --bg-button__disable: hsl(210, 25%, 88%);
 
+    --color-legend: hsl(290, 66%, 54%);
+    --color-list: hsl(219, 4%, 24%);
+    --color-parameter: hsl(338, 66%, 54%);
+    --color-input: hsl(338, 66%, 40%);
     --color-header: hsl(208, 27%, 72%);
     --color-shadow: hsl(286, 17%, 85%);
     --color-button: hsl(0, 0%, 100%);

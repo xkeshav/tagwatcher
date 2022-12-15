@@ -1,69 +1,5 @@
 @import url(./base.css);
 
-:root {
-  --color-button-action: hsl(0, 59%, 41%);
-  --color-success: hsl(82, 66%, 18%);
-  --color-error: hsl(6, 87%, 29%);
-  --color-button: hsl(210, 12%, 16%);
-  --color-button__disable: hsl(210, 14%, 22%);
-  --color-button__add: hsl(0, 0%, 100%);
-  --color-button__remove: hsl(332, 18%, 38%);
-  --color-domain: hsl(9, 6%, 30%);
-  --color-instruction: hsl(270, 42%, 63%);
-
-  --bg-parameter-focus: hsl(60, 54%, 95%);
-  --bg-button: hsl(210, 25%, 98%);
-  --bg-button__disable: hsl(210, 25%, 88%);
-  --bg-button__hover: hsl(210, 14%, 98%);
-  --bg-button__action: hsl(33, 100%, 88%);
-  --bg-button__reset: hsl(208, 14%, 85%);
-  --bg-button__remove: hsl(343, 61%, 85%);
-  --bg-button__add: hsl(224, 40%, 48%);
-  --bg-success: hsl(82, 66%, 85%);
-  --bg-error: hsl(0, 66%, 92%);
-  --bg-domain-list: hsl(55, 37%, 98%);
-
-  --border-parameter: hsl(0, 0%, 66%);
-  --border-parameter-focus: hsl(312, 83%, 63%);
-  --border-button: hsl(210, 13%, 15%);
-  --border-button__disable: hsla(210, 13%, 12%, 0.15);
-  --border-first: hsl(213, 91%, 36%);
-  --border-second: hsl(14, 100%, 57%);
-  --border-input: hsl(232, 57%, 83%);
-  --button-add__hover: hsl(0, 59%, 41%);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-field: hsl(208, 100%, 97%);
-    --bg-parameter: hsl(70, 80%, 87%);
-    --bg-button__disable: hsl(210, 25%, 88%);
-
-    --color-legend: hsl(290, 66%, 54%);
-    --color-list: hsl(219, 4%, 24%);
-    --color-parameter: hsl(338, 66%, 54%);
-    --color-input: hsl(338, 66%, 40%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-field: hsl(42, 93%, 10%);
-    --bg-parameter: hsl(70, 12%, 13%);
-    --bg-button__disable: hsla(130, 1%, 48%, 0.5);
-    --bg-button__action: hsl(25deg 66% 19%);
-    --bg-parameter-focus: hsl(60, 9%, 11%);
-    --border-first: hsl(78, 71%, 54%);
-
-    --color-legend: hsl(290, 30%, 69%);
-    --color-list: hsl(0, 0%, 84%);
-    --color-parameter: hsl(338, 81%, 98%);
-    --color-input: hsl(338, 20%, 92%);
-    --color-button__disable: hsl(210, 5%, 77%);
-    --color-error__info: hsl(0, 53%, 34%);
-  }
-}
-
 .option--container {
   padding: 1rem;
 }
@@ -80,6 +16,7 @@
 
 .legend {
   color: var(--color-legend);
+  font-size: larger;
 }
 
 .parameter--section {
@@ -181,7 +118,6 @@ btn:focus {
 .list {
   margin: 0.5rem 1rem;
   padding: 0;
-  list-style-type: none;
   color: var(--color-list, black);
 }
 
@@ -263,8 +199,8 @@ btn:focus {
   background-color: var(--bg-button__add);
   color: var(--color-button__add);
   width: auto;
-  display: inline-grid;
-  justify-content: center;
+  top: 2px;
+  position: relative;
 }
 
 .btn--add::hover {

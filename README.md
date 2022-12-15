@@ -50,6 +50,19 @@ This is an option page for the extension which allow user to customize the behav
 
 ## extension screenshot
 
+Pop up Page
+
+
+![Pop up](src/images/tagwatcher-popup-page.png)
+
+Options Page
+
+![Option](src/images/tagwatcher-option-page.png)
+
+**Tagging** Panel in Dev Tools
+
+![Panel](src/images/tagwatcher-panel-page.png)
+
 ## Known issues
 
 1. when tagging panel is not active and user do some click, it will not displayed when Tagging panel become visible but when we download the CSV, it contains all click details.

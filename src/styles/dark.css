@@ -17,7 +17,20 @@
     --bg-button: hsl(0, 72%, 53%);
     --bg-button__download: hsl(29, 23%, 25%);
     --bg-footer: hsl(184, 10%, 23%);
+    --bg-field: hsla(41, 22%, 14%, 0.96);
+    --bg-parameter: hsl(70, 12%, 13%);
+    --bg-button__disable: hsla(130, 1%, 48%, 0.5);
+    --bg-button__action: hsl(25deg 66% 19%);
+    --bg-parameter-focus: hsl(60, 9%, 11%);
+    --border-first: hsl(78, 71%, 54%);
 
+    --color-legend: hsl(67deg 83% 58%);
+    --color-list: hsl(69deg 10% 82%);
+    --color-parameter: hsl(338, 81%, 98%);
+    --color-input: hsl(338, 20%, 92%);
+    --color-button__disable: hsl(210, 5%, 77%);
+    --color-error__info: hsl(0, 53%, 34%);
+    --color-instruction: hsl(59, 67%, 49%);
     --color-header: hsl(210, 2%, 64%);
     --color-shadow: hsl(223, 8%, 55%);
     --color-button: hsl(0, 0%, 100%);
@@ -28,5 +41,6 @@
     --color-circle: hsl(0, 30%, 96%);
     --color--button__download: hsl(60, 22%, 93%);
     --color-footer: hsl(56, 88%, 66%);
+    --color-marker: hsl(116, 55%, 61%);
   }
 }
