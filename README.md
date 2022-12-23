@@ -21,7 +21,7 @@ following are the main features in current version
 
    `npm run build`
 
-   ![npm command to build code]('./screenshots/npm-command.png')
+   ![npm command to build code](./screenshots/npm-command.png)
 
    it will create **dist** folder parallel to **src** folder where we will have source code
 
