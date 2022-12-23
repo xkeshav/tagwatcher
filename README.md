@@ -65,7 +65,7 @@ to make any changes, you have run `npm build again` and reinstall the extension
 
 ## extension screenshot
 
-### Option Page
+### Option Page Screenshot
 
 ![Option Page](./screenshots/option-page.png)
 
